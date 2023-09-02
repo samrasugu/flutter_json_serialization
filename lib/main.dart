@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_json_serialization/models/mutable_person.dart';
 
 void main() {
   runApp(const MyApp());
+
+  var person = Person(firstName: 'sam', lastName: 'rasugu', age: 22);
+  person.firstName = 'Mokua';
+  person.lastName = 'Sam';
 }
 
 class MyApp extends StatelessWidget {
