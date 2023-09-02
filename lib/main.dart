@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_json_serialization/lists_maps_sets/example.dart';
 import 'package:flutter_json_serialization/models/mutable_person.dart';
 
 void main() {
   runApp(const MyApp());
 
+  // mutable class
   var person = Person(firstName: 'sam', lastName: 'rasugu', age: 22);
   person.firstName = 'Mokua';
   person.lastName = 'Sam';
+
+  // mutation of lists,maps & sets -- immutable
+  var example = Example([]);
+  example.list.add(42); //will throw run time error because we are 
 }
 
 class MyApp extends StatelessWidget {
